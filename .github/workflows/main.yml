@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main # 当推送到main分支时触发
+  schedule:
+    - cron: '50 */5 * * *' # 每5小时50分钟运行一次，用于强制刷新或作为备份机制
 
 jobs:
   build:
