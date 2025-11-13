@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>❤️ INTIMATE 智能助手</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>❤️ 欢迎来到 INTIMATE 智能助手</h1>
+    <p id="openingStatement"></p>
+    <p>请点击右下角的 Coze 图标开始对话！</p>
+    <div id="coze-bot-container"></div>
+    <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
+    <script>
+      new CozeWebSDK.WebChatClient({
+        config: {
+          bot_id: '7570575487844548642',
+        },
+        componentProps: {
+          title: 'INTIMATE',
+        },
+        auth: {
+          type: 'token',
+          token: 'pat_oLcp6F8EBhNk1up7OdF8iOaGIi56EUAvEtZl64dKkjvuYJrg2CRHKlTvpkpObexU',
+          onRefreshToken: function () {
+            return 'pat_oLcp6F8EBhNk1up7OdF8iOaGIi56EUAvEtZl64dKkjvuYJrg2CRHKlTvpkpObexU'
+          }
+        }
+      });
+    </script>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
